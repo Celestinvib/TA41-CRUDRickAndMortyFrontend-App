@@ -19,6 +19,15 @@
       "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
     },
     {
+      "id": 3,
+      "name": "Summer Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Female",
+      "origin": "Earth (Replacement Dimension)",
+      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+    },
+    {
       "id": 4,
       "name": "Beth Smith",
       "status": "Alive",
@@ -37,13 +46,42 @@
       "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
     },
     {
-      "name": "Coliseus",
-      "status": "Uknown",
-      "species": "ColiseusTir",
+      "id": 156,
+      "name": "Hemorrhage",
+      "status": "Alive",
+      "species": "Human",
       "gender": "Male",
-      "origin": "Coliseum",
-      "image": "https://rickandmortyapi.com/api/character/avatar/156.jpeg",
-      "id": 6
+      "origin": "Earth (Replacement Dimension)",
+      "image": "https://rickandmortyapi.com/api/character/avatar/156.jpeg"
+    },
+    {
+      "id": 517,
+      "name": "Wasp Rick’s Clone",
+      "status": "unknown",
+      "species": "Animal",
+      "gender": "Male",
+      "origin": "Earth (Replacement Dimension)",
+      "image": "https://rickandmortyapi.com/api/character/avatar/517.jpeg"
+    },
+    {
+      "id": 652,
+      "name": "SWAT Officer",
+      "status": "Dead",
+      "species": "Human",
+      "gender": "Male",
+      "origin": "Earth (Replacement Dimension)",
+      "image": "https://rickandmortyapi.com/api/character/avatar/652.jpeg"
+    },
+    {
+      "id": 663,
+      "name": "Reggie",
+      "status": "Dead",
+      "species": "Mythological Creature",
+      "gender": "Male",
+      "origin": "Earth (Replacement Dimension)",
+      "image": "https://rickandmortyapi.com/api/character/avatar/663.jpeg"
     }
+
+
   ]
 }
