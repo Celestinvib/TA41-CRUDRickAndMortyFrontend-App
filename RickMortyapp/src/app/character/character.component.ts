@@ -19,7 +19,10 @@ export class CharacterComponent implements OnInit {
     image:''
   }
 
+
   charId: number = 1;
+
+  editMode:boolean= false;
 
 
   constructor(
@@ -34,6 +37,11 @@ export class CharacterComponent implements OnInit {
       this.charId = params['id'];
     }
   );
+
+  this.getCharacter();
+  }
+
+  getCharacter() {
 
     this.charactersService.returnCharacter(this.charId)
       .subscribe(
@@ -68,5 +76,11 @@ export class CharacterComponent implements OnInit {
         this.router.navigate(['/characters']);
       }
     )
+  }
+
+  changeEditMode(): void {
+    this.editMode = !this.editMode;
+
+    if(!this.editMode){ this.getCharacter(); }
   }
 }

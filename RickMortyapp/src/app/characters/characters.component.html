@@ -1,6 +1,8 @@
 <div class="row m-2" *ngIf="characters!=null; else wait">
-        <a class="nav-link text-success"  routerLink="/characters/add">->Create a new character</a>
-        <div class="col mt-4 " *ngFor="let character of characters">
+    <div>
+      <button class="btn btn-success" routerLink="/characters/add">Create a new character</button>
+    </div>
+    <div class="col mt-4 " *ngFor="let character of characters">
             <div class="card" style="width: 18rem;">
                 <img src="{{ character.image }}" class="card-img-top" alt="...">
                     <div class="card-body">

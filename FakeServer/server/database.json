@@ -38,9 +38,9 @@
     },
     {
       "name": "Coliseus",
-      "status": "1",
+      "status": "Uknown",
       "species": "ColiseusTir",
-      "gender": "1",
+      "gender": "Male",
       "origin": "Coliseum",
       "image": "https://rickandmortyapi.com/api/character/avatar/156.jpeg",
       "id": 6

@@ -1,62 +1,85 @@
 <div class="container d-flex justify-content-center">
 <div class="row m-4" *ngIf="character!=null; else wait">
   <div class="col">
-      <div class="card" >
-              <div class="card-body">
-                <div class="row">
-                  <div class="col">
-                    <img src="{{ character.image }}" class="card-img-top" alt="..." style="width: 18rem;">
-                  </div>
+      <div class="card bg-dark text-light" >
+              <img class="card-img-top p-2" src="{{ character.image }}" alt="Card image cap">
+              <div class="card-body p-2">
                   <div class="col">
                     <br>
                     <div class="col">
                       <label for="name" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="name" required [(ngModel)]="character.name">
+                      <div *ngIf="editMode">
+                        <input type="text" class="form-control" id="name" required [(ngModel)]="character.name">
+                      </div>
+                      <div *ngIf="!editMode">
+                        <input type="text" class="form-control" id="name" required [(ngModel)]="character.name" readonly="readonly">
+                      </div>
                     </div>
 
                     <div class="col">
                       <label for="status" class="form-label">Status</label>
-                      <select class="form-select" id="status" required [(ngModel)]="character.status">
-                        <option value="1" selected>Alive</option>
-                        <option value="2">Dead</option>
-                        <option value="3">Unknown</option>
-                      </select>
+                      <div *ngIf="editMode">
+                        <input type="text" class="form-control" id="status" required [(ngModel)]="character.status">
+                      </div>
+                        <div *ngIf="!editMode">
+                          <input type="text" class="form-control" id="status" required [(ngModel)]="character.status" readonly="readonly">
+                        </div>
                     </div>
 
                     <div class="col">
                       <label for="species" class="form-label">Species</label>
-                      <input type="text" class="form-control" id="species" required [(ngModel)]="character.species">
+                      <div *ngIf="editMode">
+                        <input type="text" class="form-control" id="species" required [(ngModel)]="character.species">
+                      </div>
+                      <div *ngIf="!editMode">
+                        <input type="text" class="form-control" id="species" required [(ngModel)]="character.species" readonly="readonly">
+                      </div>
                     </div>
 
                     <div class="col">
                       <label for="gender" class="form-label">Gender</label>
-                      <select class="form-select" id="gender" required [(ngModel)]="character.gender">
-                        <option value="1" selected>Male</option>
-                        <option value="2">Female</option>
-                        <option value="3">Other</option>
-                      </select>
+                      <div *ngIf="editMode">
+                        <input type="text" class="form-control" id="gender" required [(ngModel)]="character.gender">
+                      </div>
+                      <div *ngIf="!editMode">
+                        <input type="text" class="form-control" id="gender" required [(ngModel)]="character.gender" readonly="readonly">
+                      </div>
                     </div>
 
                     <div class="col">
                       <label for="origin" class="form-label">Origin</label>
-                      <input type="text" class="form-control" id="origin" required [(ngModel)]="character.origin">
+                      <div *ngIf="editMode">
+                        <input type="text" class="form-control" id="origin" required [(ngModel)]="character.origin">
+                      </div>
+                      <div *ngIf="!editMode">
+                        <input type="text" class="form-control" id="origin" required [(ngModel)]="character.origin" readonly="readonly">
+                      </div>
                     </div>
                     <br>
                   </div>
                     <!-- <p><span class="description-title">Last known location:</span> </p> -->
                   </div>
-                  <div class="row d-flex justify-content-between">
-                    <div class="col">
-                      <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target="#updateModal"> Update </button>
+                  <div class="row  m-4 mt-0 ">
+                    <div class="col text-center">
+                      <div *ngIf="!editMode">
+                      <button type="button" class="btn btn-info " data-bs-toggle="modal" (click)="changeEditMode()"> UpdateMode </button>
+                      </div>
+                      <div *ngIf="editMode">
+                        <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target="#updateModal" > Update </button>
+                      </div>
                     </div>
 
-                    <div class="col">
-                      <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#deleteModal"> Delete </button>
+                    <div class="col text-center">
+                      <div *ngIf="!editMode">
+                        <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#deleteModal"> Delete </button>
+                      </div>
+                      <div *ngIf="editMode">
+                        <button type="button" class="btn btn-secondary " (click)="changeEditMode()">Back</button>
+                      </div>
                     </div>
                   </div>
 
                 </div>
-              </div>
       </div>
       <!--Update Modal -->
       <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
