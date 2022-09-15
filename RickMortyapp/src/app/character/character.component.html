@@ -1,0 +1,101 @@
+<div class="container d-flex justify-content-center">
+<div class="row m-4" *ngIf="character!=null; else wait">
+  <div class="col">
+      <div class="card" >
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <img src="{{ character.image }}" class="card-img-top" alt="..." style="width: 18rem;">
+                  </div>
+                  <div class="col">
+                    <br>
+                    <div class="col">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" required [(ngModel)]="character.name">
+                    </div>
+
+                    <div class="col">
+                      <label for="status" class="form-label">Status</label>
+                      <select class="form-select" id="status" required [(ngModel)]="character.status">
+                        <option value="1" selected>Alive</option>
+                        <option value="2">Dead</option>
+                        <option value="3">Unknown</option>
+                      </select>
+                    </div>
+
+                    <div class="col">
+                      <label for="species" class="form-label">Species</label>
+                      <input type="text" class="form-control" id="species" required [(ngModel)]="character.species">
+                    </div>
+
+                    <div class="col">
+                      <label for="gender" class="form-label">Gender</label>
+                      <select class="form-select" id="gender" required [(ngModel)]="character.gender">
+                        <option value="1" selected>Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Other</option>
+                      </select>
+                    </div>
+
+                    <div class="col">
+                      <label for="origin" class="form-label">Origin</label>
+                      <input type="text" class="form-control" id="origin" required [(ngModel)]="character.origin">
+                    </div>
+                    <br>
+                  </div>
+                    <!-- <p><span class="description-title">Last known location:</span> </p> -->
+                  </div>
+                  <div class="row d-flex justify-content-between">
+                    <div class="col">
+                      <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target="#updateModal"> Update </button>
+                    </div>
+
+                    <div class="col">
+                      <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#deleteModal"> Delete </button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+      </div>
+      <!--Update Modal -->
+      <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Update Record?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            Are you sure you want to update the record, is it permanently updated?
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close Tab</button>
+            <button type="button" class="btn btn-info" (click)="updateCharacter()" data-bs-dismiss="modal">Update Record</button>
+            </div>
+        </div>
+        </div>
+    </div>
+          <!-- Delete Modal -->
+          <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete Record?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                Are you sure you want to delete the record, is it permanently deleted?
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close Tab</button>
+                <button type="button" class="btn btn-danger" (click)="deleteCharacter()" data-bs-dismiss="modal">Delete Record</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #wait>Waiting for the data<br> if it takes to long maybe the character don't exists...</ng-template>
+
+

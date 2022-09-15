@@ -1,0 +1,39 @@
+<div class="container mt-4">
+    <h1>Add a new character</h1><br>
+      <div id="form">
+        <div class="col">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" required [(ngModel)]="character.name">
+        </div>
+
+        <div class="col">
+          <label for="status" class="form-label">Status</label>
+          <select class="form-select" id="status" required [(ngModel)]="character.status">
+            <option value="1" selected>Alive</option>
+            <option value="2">Dead</option>
+            <option value="3">Unknown</option>
+          </select>
+        </div>
+
+        <div class="col">
+          <label for="species" class="form-label">Species</label>
+          <input type="text" class="form-control" id="species" required [(ngModel)]="character.species">
+        </div>
+
+        <div class="col">
+          <label for="gender" class="form-label">Gender</label>
+          <select class="form-select" id="gender" required [(ngModel)]="character.gender">
+            <option value="1" selected>Male</option>
+            <option value="2">Female</option>
+            <option value="3">Other</option>
+          </select>
+        </div>
+
+        <div class="col">
+          <label for="origin" class="form-label">Origin</label>
+          <input type="text" class="form-control" id="origin" required [(ngModel)]="character.origin">
+        </div>
+        <br>
+        <button class="btn btn-success" (click)="saveCharacter()">Submit</button>
+    </div>
+</div>
