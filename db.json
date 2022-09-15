@@ -1,56 +1,49 @@
 {
-  "users": [
+  "characters": [
     {
-      "username": "John.x.Doe",
-      "age": 32,
-      "favourite_music_genre": "Jazz",
-      "preferred_programming_language": "Javascript",
-      "best_frontend_framework": "Vue",
-      "id": 1
+      "id": 1,
+      "name": "Rick Sanchez",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Male",
+      "origin": "Earth",
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
     },
     {
       "id": 2,
-      "username": "SniperxXx",
-      "age": 23,
-      "favourite_music_genre": "Rap",
-      "preferred_programming_language": "Python",
-      "best_frontend_framework": "React"
-    }
-  ],
-  "polls": [
-    {
-      "question": "Favourite Music Genre?",
-      "options": [
-        "Rock",
-        "Pop",
-        "Country",
-        "Rap",
-        "Jazz",
-        "Hip Hop",
-        "RNB",
-        "None",
-        "Depends"
-      ]
+      "name": "Morty Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Male",
+      "origin": "Citadel of Ricks",
+      "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
     },
     {
-      "question": "Preferred Programming Language?",
-      "options": [
-        "Java",
-        "C",
-        "C++",
-        "C#",
-        "Javascript",
-        "Python",
-        "Kotlin"
-      ]
+      "id": 4,
+      "name": "Beth Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Female",
+      "origin": "Earth (Replacement Dimension)",
+      "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg"
     },
     {
-      "question": "Better Frontend JS Framework?",
-      "options": [
-        "React",
-        "Vue",
-        "Angular"
-      ]
+      "id": 5,
+      "name": "Jerry Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Male",
+      "origin": "Earth (Replacement Dimension)",
+      "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
+    },
+    {
+      "name": "Coliseus",
+      "status": "1",
+      "species": "ColiseusTir",
+      "gender": "1",
+      "origin": "Coliseum",
+      "image": "https://rickandmortyapi.com/api/character/avatar/156.jpeg",
+      "id": 6
     }
   ]
 }
