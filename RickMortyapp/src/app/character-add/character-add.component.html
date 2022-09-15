@@ -1,6 +1,6 @@
-<div class="container mt-4">
+<div class="container mt-4 card bg-dark p-2 text-light">
     <h1>Add a new character</h1><br>
-      <div id="form">
+      <div id="form ">
         <div class="col">
           <label for="name" class="form-label">Name</label>
           <input type="text" class="form-control" id="name" required [(ngModel)]="character.name">
@@ -9,9 +9,9 @@
         <div class="col">
           <label for="status" class="form-label">Status</label>
           <select class="form-select" id="status" required [(ngModel)]="character.status">
-            <option value="1" selected>Alive</option>
-            <option value="2">Dead</option>
-            <option value="3">Unknown</option>
+            <option value="Alive" selected>Alive</option>
+            <option value="Dead">Dead</option>
+            <option value="Unknown">Unknown</option>
           </select>
         </div>
 
@@ -23,9 +23,10 @@
         <div class="col">
           <label for="gender" class="form-label">Gender</label>
           <select class="form-select" id="gender" required [(ngModel)]="character.gender">
-            <option value="1" selected>Male</option>
-            <option value="2">Female</option>
-            <option value="3">Other</option>
+            <option value="Male" selected>Male</option>
+            <option value="Female">Female</option>
+            <option value="Animal">Animal</option>
+            <option value="Unknown">Unknown</option>
           </select>
         </div>
 
