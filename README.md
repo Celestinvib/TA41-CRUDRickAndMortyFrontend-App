@@ -13,5 +13,4 @@ The deploy in aws was giving errors so the backend with the json data is deploye
 ##### ·Rick&MortyApp: https://appdeploy.d1915dfv0s7nsh.amplifyapp.com
 ##### ·Rick&MortyApp w/JWT: https://jwt-implementation.d2p5ua930613o.amplifyapp.com/
 ##### ·Backend : https://server-json-angular.herokuapp.com/
-<br>
-![AngularRick2](https://user-images.githubusercontent.com/55434881/190678643-87c666fa-1d88-44ad-9a52-8a93a7d7303a.jpg)
+![AngularRick2](https://user-images.githubusercontent.com/55434881/190681121-336e6e34-2ea3-4717-a718-84a4a78dcb77.jpg)
