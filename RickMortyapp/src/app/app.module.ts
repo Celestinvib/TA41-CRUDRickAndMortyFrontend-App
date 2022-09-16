@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './helpers/auth.intaerceptor';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +13,7 @@ import { CharactersComponent } from './characters/characters.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CharacterComponent } from './character/character.component';
 import { CharacterAddComponent } from './character-add/character-add.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import { CharacterAddComponent } from './character-add/character-add.component';
     CharactersComponent,
     NavbarComponent,
     CharacterComponent,
-    CharacterAddComponent
+    CharacterAddComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,8 @@ import { CharacterAddComponent } from './character-add/character-add.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [  { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

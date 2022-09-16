@@ -6,20 +6,22 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="role=='admin' || role=='user' ">
           <a class="nav-link  text-secondary" routerLink="/home">Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="role=='admin' || role=='user' ">
           <a class="nav-link text-secondary" routerLink="/characters">Characters</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item"  *ngIf="role=='admin' || role=='user'">
           <a class="nav-link text-secondary" routerLink="/about">About</a>
         </li>
       </ul>
-      <form class="d-flex me-5 mx-2" role="search">
+      <form class="d-flex me-5 mx-2" role="search"  *ngIf="role=='admin' || role=='user'">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
+      <a class="btn btn-success" routerLink="/login"  *ngIf="!isLoggedIn">Login</a>
+      <a class="btn btn-danger" (click)="signOut()"  *ngIf="isLoggedIn">LogOut</a>
     </div>
   </div>
 </nav>

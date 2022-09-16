@@ -61,20 +61,28 @@
                   </div>
                   <div class="row  m-4 mt-0 ">
                     <div class="col text-center">
-                      <div *ngIf="!editMode">
-                      <button type="button" class="btn btn-info " data-bs-toggle="modal" (click)="changeEditMode()"> UpdateMode </button>
-                      </div>
-                      <div *ngIf="editMode">
-                        <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target="#updateModal" > Update </button>
+                      <div *ngIf="role=='admin'">
+
+                        <div *ngIf="!editMode">
+                        <button type="button" class="btn btn-info " data-bs-toggle="modal" (click)="changeEditMode()"> UpdateMode </button>
+                        </div>
+                        <div *ngIf="editMode">
+                          <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target="#updateModal" > Update </button>
+                        </div>
+
                       </div>
                     </div>
 
                     <div class="col text-center">
-                      <div *ngIf="!editMode">
-                        <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#deleteModal"> Delete </button>
-                      </div>
-                      <div *ngIf="editMode">
-                        <button type="button" class="btn btn-secondary " (click)="changeEditMode()">Back</button>
+                      <div *ngIf="role=='admin'">
+
+                        <div *ngIf="!editMode">
+                          <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#deleteModal"> Delete </button>
+                        </div>
+                        <div *ngIf="editMode">
+                          <button type="button" class="btn btn-secondary " (click)="changeEditMode()">Back</button>
+                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -120,5 +128,3 @@
     </div>
 </div>
 <ng-template #wait>Waiting for the data<br> if it takes to long maybe the character don't exists...</ng-template>
-
-

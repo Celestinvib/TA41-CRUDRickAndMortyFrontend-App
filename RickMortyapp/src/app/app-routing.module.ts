@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { CharactersComponent } from './characters/characters.component';
 import { CharacterComponent } from './character/character.component';
 import { CharacterAddComponent } from './character-add/character-add.component';
+import { LoginComponent } from './login/login.component';
 
 import { HomeComponent } from './home/home.component';
 
@@ -12,6 +13,10 @@ const routes: Routes = [
     path:'',
     redirectTo:'/home',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'home',

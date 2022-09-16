@@ -1,6 +1,8 @@
 <div class="row m-2" *ngIf="characters!=null; else wait">
     <div>
-      <button class="btn btn-success" routerLink="/characters/add">Create a new character</button>
+      <div *ngIf="role=='admin'">
+        <button class="btn btn-success" routerLink="/characters/add">Create a new character</button>
+      </div>
     </div>
     <div class="col mt-4 d-flex justify-content-center" *ngFor="let character of characters">
             <div class="card bg-dark p-2 text-light" style="width: 18rem;">
@@ -14,4 +16,4 @@
             </div>
           </div>
 </div>
-<ng-template #wait>Waiting for the data...</ng-template>
+<ng-template #wait>Waiting for the data, maybe it takes a couple of seconds...</ng-template>
